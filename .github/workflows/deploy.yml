@@ -20,7 +20,7 @@ jobs:
     env:
       # Served from /sfmcdev/ until the custom domain is connected.
       # After tahsinwonders.net is attached, change this to "/"
-      SITE_PREFIX: "/sfmcdev/"
+      SITE_PREFIX: "/"
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
