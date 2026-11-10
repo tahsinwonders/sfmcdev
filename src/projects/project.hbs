@@ -1,0 +1,50 @@
+---
+layout: base.hbs
+bodyClass: single single-post single-format-standard
+portfolioPage: true
+pagination:
+  data: projects
+  size: 1
+  alias: project
+permalink: "{{project.slug}}/index.html"
+---
+<section id="portfolio-wp-template">
+  <div class="modal-content c-modal-content">
+    <div class="modal-header">
+      <h3 class="modal-title">{{project.title}}</h3>
+    </div>
+    <div class="item video-area" id="{{project.slug}}">
+      {{#if intro}}<div class="container"><p>{{intro}}</p></div>{{/if}}
+      <div class="modal-img">
+        <ul class="rotate{{#if oneColumn}} one-col{{/if}}">
+          {{#if project.youtube}}
+          <li class="portfolio-desktop"><div class="youtube" id="{{project.youtube}}"></div></li>
+          {{/if}}
+          {{#each media}}
+          {{#if this.isMobile}}
+          <li>
+            <div class="mobile-dummy">
+              <div class="header"></div>
+              <div class="body"><img src="{{path this.src}}" alt="{{this.alt}}"></div>
+              <div class="footer"></div>
+            </div>
+          </li>
+          {{else}}
+          <li class="portfolio-desktop"><img src="{{path this.src}}" alt="{{this.alt}}"></li>
+          {{/if}}
+          {{/each}}
+          {{#unless hasMedia}}
+          <li class="portfolio-desktop"><img src="{{path (concat '/img/thumbnails/' project.thumb)}}" alt="{{project.title}}"></li>
+          {{/unless}}
+        </ul>
+      </div>
+      {{#if pagination.href.previous}}
+      <div class="nav-next"><a href="{{path pagination.href.previous}}" aria-label="Previous project"><span class="carousel-control left"><i class="ion-chevron-left"></i></span></a></div>
+      {{/if}}
+      {{#if pagination.href.next}}
+      <div class="nav-previous"><a href="{{path pagination.href.next}}" aria-label="Next project"><span class="carousel-control right"><i class="ion-chevron-right"></i></span></a></div>
+      {{/if}}
+      {{#if outro}}<div class="container"><p>{{outro}}</p></div>{{/if}}
+    </div>
+  </div>
+</section>

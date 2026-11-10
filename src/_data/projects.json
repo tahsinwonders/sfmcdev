@@ -1,0 +1,112 @@
+[
+  {
+    "slug": "get-lift-agency",
+    "title": "Get Lift Agency",
+    "category": "Front End Development",
+    "thumb": "thumb-get-lift.jpg",
+    "intro": "GET LIFT is a full-service B2B marketing agency based in Toronto. Following a rebrand, they wanted a completely new website on HubSpot CMS, and I was brought in as the Front End Developer to build it from scratch.",
+    "outro": "HubSpot was a new platform for me. Unlike most CMSs, it has its own HTML drag-and-drop builder, which made building the page skeleton fast. I used Sass as a preprocessor, as I always do, to keep the styles manageable across more than 12 different template designs.",
+    "alts": {
+      "01-home.jpg": "Get Lift home page with the headline 'Better Insights, Greater Results'",
+      "02-contact.jpg": "Get Lift contact page with a Toronto and Austin skyline",
+      "03-creative.jpg": "Get Lift creative services page with a grid of campaign case studies",
+      "04-lead-scoring.jpg": "Get Lift lead scoring service page"
+    }
+  },
+  {
+    "slug": "business-email-newsletter",
+    "title": "Business Email Newsletter",
+    "category": "Design and Development",
+    "thumb": "email-design-hb.jpg",
+    "intro": "A bold, flat-design email template created for the HubSpot Marketplace.",
+    "outro": "On the design side, I experimented with a richer colour palette to give the template a polished, corporate look and feel.",
+    "alts": {
+      "01-desktop.jpg": "Business email newsletter template for the HubSpot Marketplace, shown on desktop in a flat design with a bold colour palette",
+      "02-phone.jpg": "The same business newsletter template on a phone, in a single-column layout"
+    }
+  },
+  {
+    "slug": "get-lift-evolve-lp",
+    "title": "Get Lift Channels Landing Page",
+    "category": "Front End Development",
+    "thumb": "channels-thumb.jpg",
+    "intro": "GET LIFT Agency asked me to build the landing page for their new Channels Program campaign. The challenge was matching the approved mockup exactly: I built the form in HubSpot and used the browser inspector to override its default styling.",
+    "outro": "The campaign was a success, generating leads for the agency's new customers on both desktop and mobile.",
+    "alts": {
+      "01-desktop.jpg": "Get Lift Channels Program landing page on desktop, with a HubSpot sign-up form",
+      "02-mobile.jpg": "Get Lift Channels Program landing page on a phone"
+    }
+  },
+  {
+    "slug": "msii",
+    "title": "The Marketing Science International Inc",
+    "category": "Design and Development",
+    "thumb": "thumb-msiit.jpg",
+    "intro": "Marketing Science International Inc. is a marketing automation training and services provider for Eloqua clients. They also offer creative and development services for clients including Lutron, Dufferin Iron & Railings and Kanata Rims and Tires.",
+    "outro": "I delivered this project end to end, from the logo design to the full site interface. The site runs on WordPress with a custom theme and editable pages, so the client can manage their own content.",
+    "alts": {
+      "01-home.jpg": "Marketing Science International home page",
+      "02-portfolio.jpg": "Marketing Science International portfolio page showing client work",
+      "03-testimonials.jpg": "Marketing Science International testimonials page",
+      "04-contact.jpg": "Marketing Science International contact page"
+    }
+  },
+  {
+    "slug": "get-lift-evolve",
+    "title": "Get Lift Evolve",
+    "category": "Front End Development",
+    "thumb": "thumb-get-lift-evolve.jpg",
+    "intro": "GET LIFT Agency was attending the 2017 SiriusDecisions Summit and needed a landing page to promote their partnership with SiriusDecisions.",
+    "outro": "This was one of the first landing page templates I built from scratch in the HubSpot code editor instead of the drag-and-drop COS editor. I chose a flexbox layout over HubSpot's 12-column float grid because it gave me better control over the design.",
+    "alts": {
+      "01-desktop.jpg": "Get Lift Evolve landing page for the 2017 SiriusDecisions Summit, on desktop",
+      "02-mobile.png": "Get Lift Evolve landing page on a phone"
+    }
+  },
+  {
+    "slug": "lutron-greetings",
+    "title": "Lutron Greetings",
+    "category": "Animation & Development",
+    "thumb": "thumb-lutron.jpg",
+    "intro": "Marketing Science International Inc. asked me to produce a holiday greeting campaign for their client Lutron, made up of an animation, a landing page and an email. The client supplied the assets and storyboard, so my role was assembling them and animating the piece in After Effects.",
+    "outro": "The campaign was built in Eloqua. Once the animation was approved, the email was straightforward: a thumbnail linking through to the landing page.",
+    "alts": {
+      "01-design.jpg": "Lutron holiday greeting campaign design with the animation, landing page and email layouts",
+      "02-greeting.jpg": "Lutron holiday greeting email with a thumbnail linking to the animated landing page"
+    }
+  },
+  {
+    "slug": "dark-theme-email-template",
+    "title": "Dark Theme Email Template",
+    "category": "Design and Development",
+    "thumb": "thumb-dark-theme-desktop.jpg",
+    "intro": "My second email template for the HubSpot Marketplace, designed in Photoshop and hand-coded from scratch.",
+    "outro": "A recurring challenge with templates is letting clients swap images and text without breaking the code, which is a common cause of rendering issues in Outlook. I commented the code thoroughly so users with limited HTML knowledge can safely edit or remove sections on their own.",
+    "alts": {
+      "01-dark-desktop.jpg": "Dark theme email template for the HubSpot Marketplace, shown on desktop",
+      "02-dark-mobile.png": "Dark theme email template on a phone",
+      "03-light-desktop.jpg": "Light theme version of the email template on desktop",
+      "04-light-mobile.png": "Light theme version of the email template on a phone"
+    }
+  },
+  {
+    "slug": "seasons",
+    "title": "Season Greeting Newsletter",
+    "category": "Design and Development",
+    "thumb": "thumb-tw-holiday.jpg",
+    "intro": "A responsive, single-column email built to render reliably across all email clients, including those that don't support responsive design.",
+    "outro": "The hero section was the hardest part. In the responsive version, the static desktop image is replaced with a looping GIF animation of the particles.",
+    "alts": {
+      "01-desktop.jpg": "Season greeting newsletter on desktop, with a particles hero section",
+      "02-mobile.png": "Season greeting newsletter on a phone, with the hero section as an animated GIF"
+    }
+  },
+  {
+    "slug": "compositing",
+    "title": "VFX Reel",
+    "category": "Compositing",
+    "thumb": "thumb-demo.jpg",
+    "youtube": "eIcA1QXefsY",
+    "outro": "A collection of my personal compositing work from 2011, created with After Effects, 3ds Max, Maya and Sony Vegas."
+  }
+]

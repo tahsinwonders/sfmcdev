@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{#if project}}{{project.title}} | {{site.name}}{{else}}{{site.title}}{{/if}}</title>
+  <meta name="description" content="{{#if metaDescription}}{{metaDescription}}{{else}}{{site.description}}{{/if}}">
+  <meta name="author" content="Tahsin Alam">
+  <meta name="theme-color" content="#24272c">
+  <link rel="canonical" href="{{site.origin}}{{page.url}}">
+  <link rel="icon" href="{{path '/img/tw-logo.svg'}}" type="image/svg+xml">
+
+  <meta property="og:site_name" content="{{site.name}}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{site.origin}}{{page.url}}">
+  <meta property="og:title" content="{{#if project}}{{project.title}} | {{site.name}}{{else}}{{site.title}}{{/if}}">
+  <meta property="og:description" content="{{#if metaDescription}}{{metaDescription}}{{else}}{{site.description}}{{/if}}">
+  <meta property="og:image" content="{{site.origin}}{{#if metaImage}}{{metaImage}}{{else}}/img/og-image.jpg{{/if}}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@TahsinWonders">
+
+  {{#unless project}}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "{{site.name}}",
+    "jobTitle": "Salesforce Marketing Cloud Specialist",
+    "url": "{{site.origin}}/",
+    "address": { "@type": "PostalAddress", "addressLocality": "Milton", "addressRegion": "Ontario", "addressCountry": "CA" },
+    "sameAs": [{{#each site.social}}"{{href}}"{{#unless @last}}, {{/unless}}{{/each}}]
+  }
+  </script>
+  {{/unless}}
+
+  <link rel="stylesheet" href="{{path '/css/tw.css'}}">
+  <noscript><style>#loader-wrapper{display:none}</style></noscript>
+</head>
+<body id="body" class="{{bodyClass}}">
+  <div id="loader-wrapper">
+    <div class="loader-section section-left">
+      <div class="v-outer">
+        <div class="v-inner">
+          <div id="loader"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section id="header" class="header{{#if portfolioPage}} portfolio-template{{/if}}">
+    <div class="container">
+      <a href="{{#if portfolioPage}}{{path '/'}}{{/if}}#banner" class="brand"><img src="{{path '/img/tw-logo.svg'}}" alt="Tahsin Wonders, home"></a>
+      <nav class="clearfix" aria-label="Main">
+        <ul class="top-nav">
+          <li><a href="{{#if portfolioPage}}{{path '/'}}{{/if}}#banner"><span class="m-hide">Home</span></a></li>
+          <li><a href="{{#if portfolioPage}}{{path '/'}}{{/if}}#about"><span class="m-hide">About</span></a></li>
+          <li><a href="{{#if portfolioPage}}{{path '/'}}{{/if}}#portfolio"{{#if portfolioPage}} class="active-nav"{{/if}}><span class="m-hide">Portfolio</span></a></li>
+          <li><a href="{{#if portfolioPage}}{{path '/'}}{{/if}}#testimonials"><span class="m-hide">Testimonial</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </section>
+
+  {{{content}}}
+
+  <footer id="footer">
+    <p>&copy; {{site.year}} {{site.name}}<br>Made with <i class="ion-heart"></i> from Milton Ontario</p>
+  </footer>
+
+  <script src="{{path '/js/jquery.min.js'}}"></script>
+  <script src="{{path '/js/bootstrap.min.js'}}"></script>
+  <script src="{{path '/js/wow.min.js'}}"></script>
+  <script src="{{path '/js/jquery.mobile.custom.min.js'}}"></script>
+  <script src="{{path '/js/skrollr.js'}}"></script>
+  <script src="{{path '/js/function.js'}}"></script>
+</body>
+</html>

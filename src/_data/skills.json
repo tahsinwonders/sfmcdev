@@ -1,0 +1,14 @@
+{
+  "software": [
+    { "name": "Journey Builder", "level": 90 },
+    { "name": "Automation Studio", "level": 90 },
+    { "name": "Email Studio", "level": 95 },
+    { "name": "Data Extensions", "level": 85 }
+  ],
+  "coding": [
+    { "name": "AMPscript", "level": 80 },
+    { "name": "SQL", "level": 85 },
+    { "name": "HTML/CSS", "level": 100 },
+    { "name": "SSJS & APIs", "level": 60 }
+  ]
+}

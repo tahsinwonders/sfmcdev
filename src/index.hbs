@@ -1,0 +1,106 @@
+---
+layout: base.hbs
+permalink: /index.html
+bodyClass: home
+---
+<section id="banner">
+  <div class="c-animated">
+    <img src="{{path '/img/particles.png'}}" alt="" class="balls animated infinite pulse visible-desktop">
+    <img src="{{path '/img/particles-mobile.png'}}" alt="" class="balls animated infinite pulse visible-mobile">
+  </div>
+  <div class="banner">
+    <div class="vertical-content">
+      <div class="vertical-inner">
+        <div>
+          <h1>Tahsin</h1>
+          <h1>Wonders</h1>
+          <p>Salesforce Marketing Cloud Specialist</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="about">
+    <div class="row padding-top-bottom">
+      <div class="aside">
+        <div class="relative-bg left">
+          <h2>About</h2>
+          <div class="social-col">
+            <div class="social-items">
+              {{#each site.social}}<a href="{{href}}" target="_blank" rel="noopener" aria-label="{{label}}"><i class="{{icon}}"></i></a>{{/each}}
+              {{#if site.email}}<a href="mailto:{{site.email}}" aria-label="Email"><i class="ion-email"></i></a>{{/if}}
+            </div>
+          </div>
+          <div class="skills-data-right wow fadeInUp">
+            <ul class="software skills">
+              {{#each skills.software}}<li>{{name}}<div><div class="percentage wow fadeInLeft" style="width:{{level}}%"></div></div></li>{{/each}}
+            </ul>
+            <ul class="coding skills">
+              {{#each skills.coding}}<li>{{name}}<div><div class="percentage wow fadeInLeft" style="width:{{level}}%"></div></div></li>{{/each}}
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="main">
+        <div class="about-content">
+          {{#each about.paragraphs}}<p>{{this}}</p>{{/each}}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="portfolio">
+  <div class="portfolio">
+    <h2>Portfolio</h2>
+    <div class="row-fluid row-portfolio">
+      {{#each projects}}
+      <div class="span-4">
+        <a href="{{path (concat '/' this.slug '/')}}">
+          <div class="thumbnail-tw">
+            <img src="{{path (concat '/img/thumbnails/' this.thumb)}}" alt="{{#if this.thumbAlt}}{{this.thumbAlt}}{{else}}{{this.title}} project preview{{/if}}" loading="lazy">
+            <div class="th-body">
+              <h3>{{this.title}}</h3>
+              <p>{{this.category}}</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+</section>
+
+<section id="testimonials">
+  <div class="container width-45-percent padding-top-bottom">
+    <div class="aside">
+      <h2>Testimonial</h2>
+    </div>
+    <div class="main">
+      <div id="carousel" class="carousel slide" data-ride="carousel" data-interval="false">
+        <div class="carousel-inner" role="listbox">
+          {{#each testimonials}}
+          <div class="testimonials item{{#if @first}} active{{/if}}">
+            <p>{{this.quote}}</p>
+            <div class="cd-author">
+              {{#if this.photo}}<img src="{{path (concat '/img/testimonials/' this.photo)}}" alt="{{this.name}}">{{/if}}
+              <ul class="cd-author-info">
+                <li>{{this.name}}</li>
+                <li>{{this.role}}</li>
+                <li>{{this.company}}</li>
+              </ul>
+            </div>
+          </div>
+          {{/each}}
+        </div>
+        <a class="left carousel-control" href="#carousel" role="button" data-slide="prev" aria-label="Previous testimonial"><i class="ion-android-arrow-dropleft-circle"></i></a>
+        <a class="right carousel-control" href="#carousel" role="button" data-slide="next" aria-label="Next testimonial"><i class="ion-android-arrow-dropright-circle"></i></a>
+        <ol class="carousel-indicators">
+          {{#each testimonials}}<li data-target="#carousel" data-slide-to="{{@index}}"{{#if @first}} class="active"{{/if}}></li>{{/each}}
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
